@@ -4,7 +4,7 @@
 #
 Name     : deprecated-coverage
 Version  : 4.5.3
-Release  : 65
+Release  : 66
 URL      : https://files.pythonhosted.org/packages/82/70/2280b5b29a0352519bb95ab0ef1ea942d40466ca71c53a2085bdeff7b0eb/coverage-4.5.3.tar.gz
 Source0  : https://files.pythonhosted.org/packages/82/70/2280b5b29a0352519bb95ab0ef1ea942d40466ca71c53a2085bdeff7b0eb/coverage-4.5.3.tar.gz
 Summary  : Code coverage measurement for Python
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554309617
+export SOURCE_DATE_EPOCH=1554311066
 export MAKEFLAGS=%{?_smp_mflags}
 python2 setup.py build -b py2
 
@@ -92,9 +92,9 @@ python2 -tt setup.py build -b py2 install --root=%{buildroot}
 
 %files bin
 %defattr(-,root,root,-)
+%exclude /usr/bin/coverage
 %exclude /usr/bin/coverage-2.7
 %exclude /usr/bin/coverage2
-/usr/bin/coverage
 
 %files extras
 %defattr(-,root,root,-)
